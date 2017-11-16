@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Formulaire équipe</title>
+	<link rel="stylesheet" href="css/yolo.css">
 </head>
 <body>
 <ul id="Formulaire">
