@@ -9,6 +9,8 @@
 </head>
 
 <body>
+	<h1>Formulaire StarTech</h1>
+	
 <section id='maSelection'>
 	<ul id="Formulaire"></ul>
 
