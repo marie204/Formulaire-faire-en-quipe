@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Formulaire équipe</title>
 	<link rel="stylesheet" href="css/yolo.css">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
@@ -23,7 +24,7 @@
 		document.getElementById('Formulaire').innerHTML += document.getElementById("question").value+'<br>';
 	}
 	function gestionnaireDuBoutonOk(){
-		document.getElementById('boutonOk').innerHTML = '<input type="text" id="question"><button onclick="creationForm();" id="boutonDuFormulaire"> Creation du Formulaire </button>';
+		document.getElementById('boutonOk').innerHTML = '<input type="text" id="question"><button onclick="creationForm();" id="boutonDuFormulaire"> Creation d\'une question </button>';
 	}
 	function createPara(){
 		deleteLi();
@@ -57,7 +58,7 @@
 		//document.getElementById('boutonOk').innerHTML = '';
 	}
 	function modOk(){
-		document.getElementById('Formulaire').innerHTML += "<input type='radio' name= 'A"+paraUl+"'><li>"+document.getElementById('monText').value+'</li> <br>';
+		document.getElementById('Formulaire').innerHTML += "<li> <input type='radio' name ='A"+paraUl+"'>"+document.getElementById('monText').value+'</li> <br>';
 		deleteLi();
 		//document.getElementById().innerHTML = "";
 		ajoutTextForm();
