@@ -1,21 +1,60 @@
 body {
-	background-image: url("../img/star.jpg");  
 	background-image: url("../img/Start.jpg");  
     background-size: 150px;
 }
 
+#boutonDuFormulaire {
+	color:black;
+	background-color: #3385ff;
+	margin:20px;
+	padding:10px;
 }
 
-#boutonok {
-
-
-}
-
-h1{ margin-right: 350px;
-	margin-left: 350px;
+h1{ width:50%;
+	min-width: 400px; 
+	margin:auto;
+	padding:auto;
 	text-align:center;
     font-size: 50px;
     border-style:double;
     font-family: 'Orbitron', sans-serif;
-    background-color: white;
- }
+    background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+	-webkit-animation: 10s linear 0s normal none infinite animate;
+	-moz-animation: 10s linear 0s normal none infinite animate;
+	-ms-animation: 10s linear 0s normal none infinite animate;
+	-o-animation: 10s linear 0s normal none infinite animate;
+	animation: 10s linear 0s normal none infinite animate;
+ 
+}
+ 
+@-webkit-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-moz-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-ms-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-o-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+
+#question {
+	background: #3385ff;
+	margin-top: 150px;
+	padding: 10px;
+	color:black;
+}
