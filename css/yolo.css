@@ -1,0 +1,21 @@
+body {
+	background-image: url("../img/star.jpg");  
+	background-image: url("../img/Start.jpg");  
+    background-size: 150px;
+}
+
+}
+
+#boutonok {
+
+
+}
+
+h1{ margin-right: 350px;
+	margin-left: 350px;
+	text-align:center;
+    font-size: 50px;
+    border-style:double;
+    font-family: 'Orbitron', sans-serif;
+    background-color: white;
+ }
