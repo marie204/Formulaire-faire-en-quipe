@@ -2,8 +2,14 @@
 <html>
 <head>
 	<title>Formulaire équipe</title>
+	<link rel="stylesheet" href="css/yolo.css">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 </head>
+
 <body>
+	<header>
+		<h1>Formulaire StarTech</h1>
+	</header>
 <ul id="Formulaire">
 	
 </ul>
