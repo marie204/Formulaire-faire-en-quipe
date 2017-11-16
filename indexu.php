@@ -8,55 +8,60 @@
 </head>
 
 <body>
-	<header>
-		<h1>Formulaire StarTech</h1>
-	</header>
-<ul id="Formulaire">
+<section id='maSelection'>
+	<ul id="Formulaire"></ul>
 
-</ul>
+</section>
 <p id="boutonOk">
-	<input type="text" id="question">
-	<button onclick="creationForm();" id="boutonDuFormulaire"> Creation du Formulaire </button>
-</p>
+	</p>
 
 <script>
+	gestionnaireDuBoutonOk();
+	var paraUl = 0 ;
 	function creationQuestion(){
-		console.log(document.getElementById("question").value);
-		document.getElementById("Formulaire").innerHTML += document.getElementById("question").value+'<br>';
+		//console.log(document.getElementById("question").value);
+		document.getElementById('Formulaire').innerHTML += document.getElementById("question").value+'<br>';
 	}
+	function gestionnaireDuBoutonOk(){
+		document.getElementById('boutonOk').innerHTML = '<input type="text" id="question"><button onclick="creationForm();" id="boutonDuFormulaire"> Creation du Formulaire </button>';
+	}
+	function createPara(){
+		deleteLi();
+		document.getElementById('maSelection').innerHTML += "<p id = A"+paraUl+">"+document.getElementById('Formulaire').innerHTML+"</p>"
+		document.getElementById('Formulaire').innerHTML='';
+		gestionnaireDuBoutonOk();
+		paraUl++;
 
+	}
 	function creationForm(){
-		console.log('hello');
-		creationQuestion();
-		ajoutTextForm();
+		initiationRedemarage();
 		deleteOk();
 	}
+
 	function deleteLi() {
 		$('#unique').remove();
 	}
 	function initiationRedemarage(){
-		console.log('test');
+		creationQuestion();
+		ajoutTextForm();
+		gestionnaireDuBoutonOk();
 	}
 	//Supprime de quoi créer formulaire
 	function deleteOk(){
-		document.getElementById('boutonOk').innerHTML = '<button id="boutonUnique" onclick="modOk();">ok</button> <button onclick="initiationRedemarage();">Fin</button>';
+		document.getElementById('boutonOk').innerHTML = '<button id="boutonUnique" onclick="modOk();">ok</button> <button onclick="createPara();">Fin</button>';
 	}
 	//<button id='boutonUnique' onclick='modOk();'>ok</button>
 	//Fonction pour ajouter du texte dans le ul
 	function ajoutTextForm(){
-		document.getElementById("Formulaire").innerHTML += "<li id='unique'><input type='text' id='monText'></li>";
+		document.getElementById('Formulaire').innerHTML += "<li id='unique'><input type='text' id='monText'></li>";
 		//document.getElementById('boutonOk').innerHTML = '';
 	}
 	function modOk(){
-		document.getElementById('Formulaire').innerHTML += "<input type='radio'><li>"+document.getElementById('monText').value+'</li> <br>';
+		document.getElementById('Formulaire').innerHTML += "<input type='radio' name= 'A"+paraUl+"'><li>"+document.getElementById('monText').value+'</li> <br>';
 		deleteLi();
 		//document.getElementById().innerHTML = "";
 		ajoutTextForm();
 	}
-	/*function simplification(){
-		document.getElementById('boutonOk').innerHTML += "<button onclick='ajoutTextForm();''> ajout d'un champ </button> <button onclick='nouveauForm();'> Nouveau formulaire </button>";
-		ajoutTextForm();
-	}*/
 </script>
 
 </body>
