@@ -9,12 +9,13 @@
 </head>
 
 <body>
+	<p id="boutonOk">
+	</p>
 <section id='maSelection'>
 	<ul id="Formulaire"></ul>
 
 </section>
-<p id="boutonOk">
-	</p>
+
 
 <script>
 	gestionnaireDuBoutonOk();
