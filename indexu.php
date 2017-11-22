@@ -9,6 +9,7 @@
 </head>
 
 <body>
+	<h1>Formulaire StarTech</h1>
 	<p id="boutonOk">
 	</p>
 <section id='maSelection'>
