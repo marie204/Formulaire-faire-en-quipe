@@ -12,19 +12,23 @@
 
 <body>
 	
-	<h1>Formulaire StarTech</h1>
-	<p id="boutonOk">
-	</p>
+<h1>Formulaire StarTech</h1>
 
 <div id="horloge"
  a href="https://www.zeitverschiebung.net/fr/country/fr">
 <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=medium&timezone=Europe%2FParis" width="100%" height="200" frameborder="0" seamless></iframe> </div>
+<div id="box">
+
+     <p id="boutonOk">
+	</p>
 
 <section id='maSelection'>
 	<ul id="Formulaire"></ul>
 </section>
 
 
+
+</div>
 
 <script>
 	gestionnaireDuBoutonOk();

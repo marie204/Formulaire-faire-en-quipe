@@ -9,12 +9,12 @@ body {
 	padding:10px;
 }
 
-h1{ width:50%;
+h1{ width:55%;
 	min-width: 400px; 
-	margin:auto;
+	margin: left 0%;
 	padding:auto;
 	text-align:center;
-    font-size: 50px;
+    font-size: 60px;
     border-style:double;
     font-family: 'Orbitron', sans-serif;
     color:white; 
@@ -73,4 +73,18 @@ p {
 
 li {	
 	list-style: none;
+}
+
+#box { 
+    
+}
+#box{
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    text-align:center;  
+    padding: 100px;
+    margin-left:32%;
+    margin-top:10%;
+    background-color: rgba(0,0,0,0.2);
 }
