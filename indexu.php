@@ -19,8 +19,7 @@
 <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=medium&timezone=Europe%2FParis" width="100%" height="200" frameborder="0" seamless></iframe> </div>
 <div id="box">
 
-     <p id="boutonOk">
-	</p>
+     <p id="boutonOk"></p>
 
 <section id='maSelection'>
 	<ul id="Formulaire"></ul>
