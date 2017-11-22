@@ -16,9 +16,14 @@
 	<p id="boutonOk">
 	</p>
 
+<div id="horloge"
+ a href="https://www.zeitverschiebung.net/fr/country/fr">
+<iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=medium&timezone=Europe%2FParis" width="100%" height="200" frameborder="0" seamless></iframe> </div>
+
 <section id='maSelection'>
 	<ul id="Formulaire"></ul>
 </section>
+
 
 
 <script>
