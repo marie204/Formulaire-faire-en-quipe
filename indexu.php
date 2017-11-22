@@ -6,15 +6,18 @@
 	<link rel="stylesheet" href="css/yolo.css">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 	<script src="jquery-3.2.1.min.js"></script>
+	<script type="css/lol/js"></script>
+
 </head>
 
 <body>
+	
 	<h1>Formulaire StarTech</h1>
 	<p id="boutonOk">
 	</p>
+
 <section id='maSelection'>
 	<ul id="Formulaire"></ul>
-
 </section>
 
 
