@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/yolo.css">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 	<script src="jquery-3.2.1.min.js"></script>
-	<script type="css/lol/js"></script>
+	<script type="css/lol.js"></script>
 
 </head>
 
@@ -33,12 +33,15 @@
 <script>
 	gestionnaireDuBoutonOk();
 	var paraUl = 0 ;
+	var maClickBox;
 	function creationQuestion(){
 		//console.log(document.getElementById("question").value);
 		document.getElementById('Formulaire').innerHTML += document.getElementById("question").value+'<br>';
+		maClickBox = document.getElementById('checkOns').value;		
 	}
 	function gestionnaireDuBoutonOk(){
 		document.getElementById('boutonOk').innerHTML = '<input type="text" id="question"><button onclick="creationForm();" id="boutonDuFormulaire"> Creation d\'une question </button>';
+		document.getElementById('boutonOk').innerHTML+= '<select id=checkOns><option value="radio">Radio</option><option value="checkbox">checkbox</option></select>';
 	}
 	function createPara(){
 		deleteLi();
@@ -73,23 +76,24 @@
 		//document.getElementById('boutonOk').innerHTML = '';
 	}
 	function modOk(){
-		document.getElementById('Formulaire').innerHTML += "<li> <input type='radio' name ='A"+paraUl+"'>"+document.getElementById('monText').value+'</li> <br>';
+		document.getElementById('Formulaire').innerHTML += "<li> <input type='"+maClickBox+"' name ='A"+paraUl+"'>"+document.getElementById('monText').value+'</li> <br>';
 		deleteLi();
 		//document.getElementById().innerHTML = "";
 		ajoutTextForm();
 	}
-	function ajouterReponse(monId){
+	function ajouterReponse(monId, maSaveCheck){
 		console.log(monId);
 		maVarPoub = monId.substr(1);
 		console.log(maVarPoub);
-		document.getElementById(monId).innerHTML += '<div id= C'+maVarPoub+'><input type="text" id="maNewRep'+monId+'"> <button onclick="addRep(\''+monId+'\')">ok</button><button onclick="supprimeChan(\''+monId+'\');">Terminer</button></div>';
+		document.getElementById(monId).innerHTML += '<div id= C'+maVarPoub+'><input type="text" id="maNewRep'+monId+'"> <button onclick="addRep(\''+monId+'\')">ok</button><button onclick="supprimeChan(\''+monId+'\', \''+maSaveCheck+'\');">Terminer</button></div>';
 		/*"<li> <input type='radio' name ='A"+maVarPoub+"'>"+document.getElementById('monText').value+'</li> <br>';*/
 	}
-	function addRep(monId){
+	function addRep(monId, maSaveCheck){
 		maVarPoub = monId.substr(1);
 		maVarPoub3 = 'maNewRep'+monId;
 		maVarPoub4 = 'B'+maVarPoub;
-		document.getElementById(maVarPoub4).innerHTML += '<li><input type="radio" name="A'+maVarPoub+'">'+ document.getElementById(maVarPoub3).value + '</li>';
+		maVarPoub5 = 
+		document.getElementById(maVarPoub4).innerHTML += '<li><input type="'+maVarPoub5+'" name="A'+maVarPoub+'">'+ document.getElementById(maVarPoub3).value + '</li>';
 		document.getElementById(maVarPoub3).value = '';		
 
 		//supprimeChan(monId);
@@ -100,6 +104,7 @@
 		maVarPoub2 = 'C'+maVarPoub;
 		$('#' + maVarPoub2).remove();
 	}
+
 </script>
 
 </body>
