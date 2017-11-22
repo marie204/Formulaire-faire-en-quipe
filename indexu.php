@@ -33,7 +33,8 @@
 	}
 	function createPara(){
 		deleteLi();
-		document.getElementById('maSelection').innerHTML += "<p id = A"+paraUl+">"+document.getElementById('Formulaire').innerHTML+"</p>"
+		maVarPoub = 'B'+paraUl;
+		document.getElementById('maSelection').innerHTML += "<p id = "+maVarPoub+">"+document.getElementById('Formulaire').innerHTML+"<button onclick=ajouterReponse('"+maVarPoub+"');>Ajouter une réponse</button>"+"</p>";
 		document.getElementById('Formulaire').innerHTML='';
 		gestionnaireDuBoutonOk();
 		paraUl++;
@@ -54,7 +55,7 @@
 	}
 	//Supprime de quoi créer formulaire
 	function deleteOk(){
-		document.getElementById('boutonOk').innerHTML = '<button id="boutonUnique" onclick="modOk();">ok</button> <button onclick="createPara();">Fin</button>';
+		document.getElementById('boutonOk').innerHTML = '<button id="boutonUnique" onclick="modOk();">valider réponse</button> <button onclick="createPara();">Valider question</button>';
 	}
 	//<button id='boutonUnique' onclick='modOk();'>ok</button>
 	//Fonction pour ajouter du texte dans le ul
@@ -67,6 +68,28 @@
 		deleteLi();
 		//document.getElementById().innerHTML = "";
 		ajoutTextForm();
+	}
+	function ajouterReponse(monId){
+		console.log(monId);
+		maVarPoub = monId.substr(1);
+		console.log(maVarPoub);
+		document.getElementById(monId).innerHTML += '<div id= C'+maVarPoub+'><input type="text" id="maNewRep'+monId+'"> <button onclick="addRep(\''+monId+'\')">ok</button><button onclick="supprimeChan(\''+monId+'\');">Terminer</button></div>';
+		/*"<li> <input type='radio' name ='A"+maVarPoub+"'>"+document.getElementById('monText').value+'</li> <br>';*/
+	}
+	function addRep(monId){
+		maVarPoub = monId.substr(1);
+		maVarPoub3 = 'maNewRep'+monId;
+		maVarPoub4 = 'B'+maVarPoub;
+		document.getElementById(maVarPoub4).innerHTML += '<li><input type="radio" name="A'+maVarPoub+'">'+ document.getElementById(maVarPoub3).value + '</li>';
+		document.getElementById(maVarPoub3).value = '';		
+
+		//supprimeChan(monId);
+	}
+	function supprimeChan(monId){
+		/*document.getElementById(monId).innerHTML*/
+		maVarPoub = monId.substr(1);
+		maVarPoub2 = 'C'+maVarPoub;
+		$('#' + maVarPoub2).remove();
 	}
 </script>
 
