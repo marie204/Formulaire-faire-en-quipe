@@ -1,7 +1,10 @@
 body {
     background-image: url("../img/poto.jpg");
 }
-
+ul button{
+	position: relative;
+	left: 80%;
+}
 #boutonDuFormulaire {
 	color:black;
 	background-color: white;

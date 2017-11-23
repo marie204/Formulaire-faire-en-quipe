@@ -46,7 +46,7 @@
 		deleteLi();
 		maVarPoub = 'B'+paraUl;
 		console.log(maVarPoub);
-		document.getElementById('maSelection').innerHTML += "<ul id = '"+maVarPoub+"'>"+document.getElementById('Formulaire').innerHTML+"<button onclick=ajouterReponse('"+maVarPoub+"','"+maClickBox+"');>Ajouter une réponse</button>"+"<button onclick='supprimerQuestion(\""+maVarPoub+"\");'>Supprimer la question</button></ul>";
+		document.getElementById('maSelection').innerHTML += "<ul id = '"+maVarPoub+"'>"+document.getElementById('Formulaire').innerHTML+"<button onclick=ajouterReponse('"+maVarPoub+"','"+maClickBox+"');>Ajouter une réponse</button>"+"<button onclick='supprimerQuestion(\""+paraUl+"\");'>Supprimer la question</button></ul><hr>";
 		document.getElementById('Formulaire').innerHTML='';
 		gestionnaireDuBoutonOk();
 		paraUl++;
@@ -106,7 +106,8 @@
 		$('#' + maVarPoub2).remove();
 	}
 	function supprimerQuestion(monIdP){
-		document.getElementById(monIdP).innerHTML = '';
+		document.getElementById('B'+monIdP).innerHTML = '';
+
 	}
 
 </script>
