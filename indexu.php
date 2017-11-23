@@ -46,7 +46,7 @@
 	function createPara(){
 		deleteLi();
 		maVarPoub = 'B'+paraUl;
-		document.getElementById('maSelection').innerHTML += "<p id = "+maVarPoub+">"+document.getElementById('Formulaire').innerHTML+"<button onclick=ajouterReponse('"+maVarPoub+"');>Ajouter une réponse</button>"+"</p>";
+		document.getElementById('maSelection').innerHTML += "<p id = "+maVarPoub+">"+document.getElementById('Formulaire').innerHTML+"<button onclick=ajouterReponse('"+maVarPoub+"','"+maClickBox+"');>Ajouter une réponse</button>"+"</p>";
 		document.getElementById('Formulaire').innerHTML='';
 		gestionnaireDuBoutonOk();
 		paraUl++;
@@ -85,15 +85,16 @@
 		console.log(monId);
 		maVarPoub = monId.substr(1);
 		console.log(maVarPoub);
-		document.getElementById(monId).innerHTML += '<div id= C'+maVarPoub+'><input type="text" id="maNewRep'+monId+'"> <button onclick="addRep(\''+monId+'\')">ok</button><button onclick="supprimeChan(\''+monId+'\', \''+maSaveCheck+'\');">Terminer</button></div>';
+		console.log(maSaveCheck);
+		document.getElementById(monId).innerHTML += '<div id= C'+maVarPoub+'><input type="text" id="maNewRep'+monId+'"> <button onclick="addRep(\''+monId+'\',\''+maSaveCheck+'\')">ok</button><button onclick="supprimeChan(\''+monId+'\', \''+maSaveCheck+'\');">Terminer</button></div>';
 		/*"<li> <input type='radio' name ='A"+maVarPoub+"'>"+document.getElementById('monText').value+'</li> <br>';*/
 	}
 	function addRep(monId, maSaveCheck){
 		maVarPoub = monId.substr(1);
 		maVarPoub3 = 'maNewRep'+monId;
 		maVarPoub4 = 'B'+maVarPoub;
-		maVarPoub5 = 
-		document.getElementById(maVarPoub4).innerHTML += '<li><input type="'+maVarPoub5+'" name="A'+maVarPoub+'">'+ document.getElementById(maVarPoub3).value + '</li>';
+		console.log(maSaveCheck);
+		document.getElementById(maVarPoub4).innerHTML += '<li><input type="'+maSaveCheck+'" name="A'+maVarPoub+'">'+ document.getElementById(maVarPoub3).value + '</li>';
 		document.getElementById(maVarPoub3).value = '';		
 
 		//supprimeChan(monId);
