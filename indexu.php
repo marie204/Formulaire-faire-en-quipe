@@ -46,7 +46,7 @@
 		deleteLi();
 		maVarPoub = 'B'+paraUl;
 		console.log(maVarPoub);
-		document.getElementById('maSelection').innerHTML += "<ul id = '"+maVarPoub+"'>"+document.getElementById('Formulaire').innerHTML+"<button onclick=ajouterReponse('"+maVarPoub+"','"+maClickBox+"');>Ajouter une réponse</button>"+"<button onclick='supprimerQuestion(\""+paraUl+"\");'>Supprimer la question</button></ul><hr>";
+		document.getElementById('maSelection').innerHTML += "<ul id = '"+maVarPoub+"'>"+document.getElementById('Formulaire').innerHTML+"<button class='boutonPortant' onclick=ajouterReponse('"+maVarPoub+"','"+maClickBox+"');>Ajouter une réponse</button>"+"<button class='boutonPortant' onclick='supprimerQuestion(\""+paraUl+"\");'>Supprimer la question</button></ul>";
 		document.getElementById('Formulaire').innerHTML='';
 		gestionnaireDuBoutonOk();
 		paraUl++;
@@ -94,7 +94,7 @@
 		maVarPoub3 = 'maNewRep'+monId;
 		maVarPoub4 = 'B'+maVarPoub;
 		console.log(maSaveCheck);
-		document.getElementById(maVarPoub4).innerHTML += '<li><input type="'+maSaveCheck+'" name="A'+maVarPoub+'">'+ document.getElementById(maVarPoub3).value + '</li>';
+		document.getElementById(maVarPoub4).innerHTML += '<li><input type="'+maSaveCheck+'" name="A'+maVarPoub+'">'+ document.getElementById(maVarPoub3).value + '</li> <br>';
 		document.getElementById(maVarPoub3).value = '';		
 
 		//supprimeChan(monId);
